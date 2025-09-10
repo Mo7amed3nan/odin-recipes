@@ -4,10 +4,13 @@
   box-sizing : border-box;
   font-family: 'Roboto', sans-serif;
 }
-body{
+html, body, .sub{
+  height: 100%;
+}
+body, .sub{
   display: flex;
-  height: auto;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 ul{
@@ -102,6 +105,7 @@ li{
 .content{
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .content .title{
@@ -158,10 +162,14 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 /** koshari and Molokhia page **/
 
+.content{
+  flex: 1 0 auto;
+}
 .sub .content{
   display: flex;
   justify-content: center;
@@ -176,6 +184,9 @@ li{
   display: flex;
   flex-direction: column;
   gap: 2em;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0%;
 }
 
 .sub .left{
@@ -190,7 +201,7 @@ li{
   display: flex;
   justify-content: center;
   height: auto;
-  width: 50vh;
+  
   border: 2px solid black;
   border-radius: 14px;
 }
